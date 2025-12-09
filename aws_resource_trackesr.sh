@@ -31,8 +31,8 @@ aws ec2 describe-instances | jq ‘Reservations[].Instances[].InstanceId’
 #list lambda
 echo “Print the list of lambda functions”
 #This command runs the aws lambda list-functions command and appends its output to the end of the existing resourceTracker file
-aws lambda list-functions >> resourceTracker:q!
+aws lambda list-functions >> resourceTracker
 	
 #list IAM users
 echo “Print the list of IAM users”
-aws iam list-user
+aws iam list-users
